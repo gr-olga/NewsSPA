@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type {News} from "@/types";
+import {formatDate} from "../utils/dateUtils";
 
 defineProps<{
   news: News
@@ -18,7 +19,7 @@ defineProps<{
         <p class="description">{{ news.description }}</p>
         <div>
           <p>{{ news.author }}</p>
-          <p>{{ news.publishedAt }}</p>
+          <p>{{ formatDate(news.publishedAt) }}</p>
         </div>
       </div>
     </div>
