@@ -14,12 +14,11 @@ defineProps<{
     </div>
   </div>
 </template>
+
 <style scoped>
 .news_list_box {
   display: grid;
   grid-template-columns: auto auto;
   gap: 5px;
-  //margin: 1rem;
-  //padding: 1rem;
 }
 </style>

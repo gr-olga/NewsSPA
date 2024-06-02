@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { News } from '@/types'
-import { formatDate } from '../utils/dateUtils'
+import { formatDate } from '@/utils/dateUtils'
 
 defineProps<{
   news: News
