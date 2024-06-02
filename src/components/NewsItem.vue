@@ -14,7 +14,8 @@ defineProps<{
       <p class="source_name"> Material from: {{ news.source.name }}</p>
     </div>
     <div class="item_box">
-      <img :src="news.urlToImage" alt="news image">
+      <img :src="news.urlToImage" alt="news image" v-if="news.urlToImage">
+      <div class="image" v-if="!news.urlToImage"></div>
       <div class=text_box>
         <p class="description">{{ news.description }}</p>
         <div>
@@ -44,6 +45,7 @@ defineProps<{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-inline: 1rem;
   }
 }
 
@@ -63,5 +65,13 @@ defineProps<{
 img {
   width: 20vw;
   height: auto;
+  border-radius: 0.8rem;
+}
+
+.image {
+  width: 20vw;
+  height: 10vw;
+  background-color: #7a7777;
+  border-radius: 0.8rem;
 }
 </style>
