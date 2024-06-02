@@ -10,7 +10,7 @@ onMounted(() => store.fetchGeneralArticles());
 <template>
   <div class="home_view__link">
     <router-link to="/search" class="link">
-      <p>If you want find news by date or by topic follow the link </p>
+      <p>Search</p>
     </router-link>
   </div>
   <h2 class="title">General news</h2>
@@ -37,12 +37,13 @@ onMounted(() => store.fetchGeneralArticles());
 
 .link {
   text-decoration: none;
-  font-style: italic;
-  font-weight: bolder;
-  color: #1f3f4d;
-  padding: 1rem;
-  border: 1px solid #1f3f4d;
+  align-self: start;
+  font-size: 1rem;
+  border: 1px solid #333;
   border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: #1f3f4d;
   transition: background-color 0.3s;
 }
 

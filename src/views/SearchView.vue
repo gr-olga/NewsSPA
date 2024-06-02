@@ -25,7 +25,7 @@ const onSubmit = () => {
 
 <template>
   <div class="search_head">
-    <button @click="router.go(-1)" class="back_btn">Back to all news</button>
+    <button @click="router.go(-1)" class="back_btn">Back</button>
     <h1 class="title">Search</h1>
   </div>
   <form @submit.prevent="onSubmit" class="search_view__form">
@@ -63,11 +63,14 @@ const onSubmit = () => {
 .back_btn {
   align-self: start;
   font-size: 1rem;
-  font-weight: bold;
   border: 1px solid #333;
   border-radius: 1rem;
   padding: 1rem;
   cursor: pointer;
+  color: #1f3f4d;
+}
+.back_btn:hover {
+  background-color: #e3e2e2;
 }
 
 .title {

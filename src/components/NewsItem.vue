@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" xmlns="http://www.w3.org/1999/html">
 import type {News} from "@/types";
 import {formatDate} from "../utils/dateUtils";
 
@@ -10,7 +10,9 @@ defineProps<{
 <template>
   <div class="news_item">
     <div class="title_box">
-      <h2>{{ news.title }}</h2>
+      <a :href="news.url" target="_blank" class="link_title">
+        <h2>{{ news.title }}</h2>
+      </a>
       <p class="source_name"> Material from: {{ news.source.name }}</p>
     </div>
     <div class="item_box">
@@ -43,6 +45,7 @@ defineProps<{
   margin: 1rem;
   padding: 1rem;
 }
+
 .text_box {
   display: flex;
   flex-direction: column;
@@ -55,9 +58,15 @@ defineProps<{
   flex-direction: column;
   margin: 1rem;
   font-size: 1rem;
-  color: #333;
 }
-
+.link_title{
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+.link_title:hover{
+  color: #3a738c;
+}
 .source_name {
   font-size: 0.5rem;
   color: #491d1d;
