@@ -43,6 +43,7 @@ onMounted(() => store.fetchGeneralArticles());
   padding: 1rem;
   border: 1px solid #1f3f4d;
   border-radius: 1rem;
+  transition: background-color 0.3s;
 }
 
 .link:hover {
