@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <div class="news_list_box">
-    <div v-for="item in newsList">
+    <div v-for="(item, index) in newsList" :key="index">
       <NewsItem :news="item"></NewsItem>
     </div>
   </div>
