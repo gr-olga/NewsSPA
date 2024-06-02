@@ -27,5 +27,14 @@ export const useNewsStore = defineStore('news', {
         fetchSearchedArticles() {
             getSpecificNews(this.topic, this.date, this.sortBy).then(articles => this.searchedArticles = articles);
         },
+        setTopic(topic: string) {
+            this.topic = topic;
+        },
+        setDate(date: string) {
+            this.date = date;
+        },
+        setSortBy(sortBy: SortingType) {
+            this.sortBy = sortBy;
+        }
     }
 });
