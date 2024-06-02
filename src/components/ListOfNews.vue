@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {News} from '@/types'
+import type { News } from '@/types'
 import NewsItem from '@/components/NewsItem.vue'
 
 defineProps<{
