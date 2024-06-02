@@ -8,12 +8,44 @@ onMounted(() => store.fetchGeneralArticles());
 </script>
 
 <template>
-  <div>
-    <router-link to="/search">
-      <h2>If you want find news by date of by topic follow the link </h2>
+  <div class="home_view__link">
+    <router-link to="/search" class="link">
+      <p>If you want find news by date or by topic follow the link </p>
     </router-link>
   </div>
+  <h2 class="title">General news</h2>
   <Suspense>
     <ListOfNews :news-list="store.generalArticles"></ListOfNews>
   </Suspense>
 </template>
+
+<style scoped>
+.home_view__link {
+  display: flex;
+  justify-content: end;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.title {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-left: 4rem;
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bolder;
+  color: #1f3f4d;
+  padding: 1rem;
+  border: 1px solid #1f3f4d;
+  border-radius: 1rem;
+}
+
+.link:hover {
+  background-color: #e3e2e2;
+}
+</style>
