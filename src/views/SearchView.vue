@@ -28,7 +28,6 @@ const onSubmit = () => {
     <button @click="router.go(-1)" class="back_btn">Back to all news</button>
     <h1 class="title">Search</h1>
   </div>
-  <p class="form_title">Search for news by topic, date and sort by</p>
   <form @submit.prevent="onSubmit" class="search_view__form">
     <div class="input_box">
       <label>Add a key-word for search</label>
@@ -68,6 +67,7 @@ const onSubmit = () => {
   border: 1px solid #333;
   border-radius: 1rem;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .title {
@@ -78,17 +78,12 @@ const onSubmit = () => {
   font-weight: bold;
 }
 
-.form_title {
-  font-size: 1rem;
-  color: #333;
-  margin: 1rem;
-}
-
 .search_view__form {
   display: flex;
   gap: 1rem;
   margin: 1rem;
   align-items: center;
+  padding: 2rem;
 }
 
 .input_box {

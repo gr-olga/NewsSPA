@@ -9,18 +9,19 @@ defineProps<{
 </script>
 
 <template>
-  <main>
-    <div v-for="item in newsList">
-      <NewsItem :news="item"></NewsItem>
-    </div>
-  </main>
+  <div class="news_list_box">
+  <div v-for="item in newsList">
+    <NewsItem :news="item"></NewsItem>
+  </div>
+  </div>
+
 </template>
 <style scoped>
-main{
+.news_list_box {
   display: grid;
   grid-template-columns: auto auto;
   gap: 5px;
-  margin: 1rem;
-  padding: 1rem;
+  //margin: 1rem;
+  //padding: 1rem;
 }
 </style>
