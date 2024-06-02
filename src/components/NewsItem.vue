@@ -81,7 +81,7 @@ defineProps<{
 .image_placeholder {
   width: 20vw;
   height: 10vw;
-  background-color: #7a7777;
+  background-color: #e9e9e9;
   border-radius: 0.8rem;
 }
 

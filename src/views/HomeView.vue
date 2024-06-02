@@ -31,7 +31,7 @@ onMounted(() => store.fetchGeneralArticles());
   color: #333;
   font-size: 1.5rem;
   padding: 1rem;
-  margin-left: 4rem;
+  margin-left: 2rem;
   font-weight: bold;
 }
 
