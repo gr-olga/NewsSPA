@@ -2,6 +2,7 @@ import {defineStore} from 'pinia';
 import {getGeneralNews, getSpecificNews} from "@/api/api";
 import {SortingType} from "@/constants/SortingType";
 import type {News} from "@/types";
+import {formatDate} from "@/utils/dateUtils";
 
 
 interface NewsStore {
@@ -16,8 +17,8 @@ export const useNewsStore = defineStore('news', {
     state: (): NewsStore => ({
         generalArticles: [],
         searchedArticles: [],
-        topic: 'apple',
-        date: "2024-05-30",
+        topic: '',
+        date: formatDate(new Date().toISOString()),
         sortBy: SortingType.Relevancy
     }),
     actions: {

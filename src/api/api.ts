@@ -7,7 +7,7 @@ const BaseUrl = 'https://newsapi.org/v2/'
 
 export async function getSpecificNews(topic: string, date: string, sortBy: SortingType) {
     try {
-        const fullUrl = `${BaseUrl}everything?q=${topic}&from=${date}&sortBy=${sortBy}&pageSize=10&apiKey=${API_KEY}`;
+        const fullUrl = `${BaseUrl}everything?q=${topic}&to=${date}&sortBy=${sortBy}&pageSize=10&apiKey=${API_KEY}`;
         const res = await axios.get(fullUrl)
         return res.data.articles
     } catch (e) {
