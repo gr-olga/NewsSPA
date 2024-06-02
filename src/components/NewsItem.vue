@@ -59,14 +59,17 @@ defineProps<{
   margin: 1rem;
   font-size: 1rem;
 }
-.link_title{
+
+.link_title {
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
 }
-.link_title:hover{
+
+.link_title:hover {
   color: #3a738c;
 }
+
 .source_name {
   font-size: 0.5rem;
   color: #491d1d;

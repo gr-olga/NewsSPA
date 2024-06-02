@@ -69,6 +69,7 @@ const onSubmit = () => {
   cursor: pointer;
   color: #1f3f4d;
 }
+
 .back_btn:hover {
   background-color: #e3e2e2;
 }
@@ -100,7 +101,8 @@ const onSubmit = () => {
   border: 1px solid #333;
   border-radius: 1rem;
 }
-.form_btn{
+
+.form_btn {
   padding: 1rem;
   border: 1px solid #333;
   border-radius: 1rem;
