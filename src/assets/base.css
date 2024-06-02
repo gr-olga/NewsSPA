@@ -3,21 +3,21 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    position: relative;
-    font-weight: normal;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
 }
 
 body {
-    min-height: 100vh;
-    line-height: 1.6;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    text-rendering: optimizeLegibility;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: flex-start;
-    background-color: #F6F6F6;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: flex-start;
+  background-color: #f6f6f6;
 }

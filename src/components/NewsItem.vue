@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type {News} from "@/types";
-import {formatDate} from "../utils/dateUtils";
+import type { News } from '@/types'
+import { formatDate } from '../utils/dateUtils'
 
 defineProps<{
   news: News
-}>();
+}>()
 </script>
 
 <template>
@@ -13,12 +13,12 @@ defineProps<{
       <a :href="news.url" target="_blank" class="link_title">
         <h2>{{ news.title }}</h2>
       </a>
-      <p class="source_name"> Material from: {{ news.source.name }}</p>
+      <p class="source_name">Material from: {{ news.source.name }}</p>
     </div>
     <div class="item_box">
-      <img :src="news.urlToImage" class="image" alt="news image" v-if="news.urlToImage">
+      <img :src="news.urlToImage" class="image" alt="news image" v-if="news.urlToImage" />
       <div class="image_placeholder" v-if="!news.urlToImage"></div>
-      <div class=text_box>
+      <div class="text_box">
         <p class="description">{{ news.description }}</p>
         <div>
           <p>{{ news.author }}</p>
@@ -40,7 +40,7 @@ defineProps<{
   grid-template-columns: 1fr 1fr;
   gap: 5px;
   border: 1px solid #a0a0a0;
-  background-color: rgb(250 250 250);;
+  background-color: rgb(250 250 250);
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;

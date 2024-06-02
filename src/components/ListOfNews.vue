@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type {News} from "@/types";
-import NewsItem from "@/components/NewsItem.vue";
+import type { News } from '@/types'
+import NewsItem from '@/components/NewsItem.vue'
 
 defineProps<{
   newsList: Array<News>
-}>();
-
+}>()
 </script>
 
 <template>
@@ -14,7 +13,6 @@ defineProps<{
       <NewsItem :news="item"></NewsItem>
     </div>
   </div>
-
 </template>
 <style scoped>
 .news_list_box {

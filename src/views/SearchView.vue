@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import {useNewsStore} from "@/stores/newsStore.js";
-import {reactive} from "vue";
-import ListOfNews from "@/components/ListOfNews.vue";
-import {SortingType} from "@/constants/SortingType";
-import {formatDate} from "@/utils/dateUtils";
-import {useRouter} from "vue-router";
+import { useNewsStore } from '@/stores/newsStore.js'
+import { reactive } from 'vue'
+import ListOfNews from '@/components/ListOfNews.vue'
+import { SortingType } from '@/constants/SortingType'
+import { formatDate } from '@/utils/dateUtils'
+import { useRouter } from 'vue-router'
 
-const store = useNewsStore();
-const router = useRouter();
+const store = useNewsStore()
+const router = useRouter()
 
 const state = reactive({
   topic: store.topic,
@@ -16,10 +16,10 @@ const state = reactive({
 })
 
 const onSubmit = () => {
-  store.setTopic(state.topic);
-  if (state.sortBy) store.setSortBy(state.sortBy as SortingType);
+  store.setTopic(state.topic)
+  if (state.sortBy) store.setSortBy(state.sortBy as SortingType)
   if (state.date) store.setDate(formatDate(state.date))
-  store.fetchSearchedArticles();
+  store.fetchSearchedArticles()
 }
 </script>
 
@@ -31,11 +31,11 @@ const onSubmit = () => {
   <form @submit.prevent="onSubmit" class="search_view__form">
     <div class="input_box">
       <label>Add a key-word for search</label>
-      <input class="text_input" v-model="state.topic" type="text"/>
+      <input class="text_input" v-model="state.topic" type="text" />
     </div>
     <div class="input_box">
       <label>Add date</label>
-      <input class="text_input" v-model="state.date" type="date"/>
+      <input class="text_input" v-model="state.date" type="date" />
     </div>
     <div class="input_box">
       <label>sort buy</label>
@@ -47,8 +47,7 @@ const onSubmit = () => {
     </div>
     <button class="form_btn" :disabled="!state.topic" type="submit">Search</button>
   </form>
-  <div>
-  </div>
+  <div></div>
   <ListOfNews :news-list="store.searchedArticles"></ListOfNews>
 </template>
 
@@ -119,5 +118,4 @@ const onSubmit = () => {
   color: #333;
   cursor: not-allowed;
 }
-
 </style>
