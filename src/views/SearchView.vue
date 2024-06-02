@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import {useNewsStore} from "@/stores/newsStore.js";
-import {onMounted, reactive} from "vue";
+import {reactive} from "vue";
 import ListOfNews from "@/components/ListOfNews.vue";
 import {SortingType} from "@/constants/SortingType";
 import {formatDate} from "@/utils/dateUtils";
+import {useRouter} from "vue-router";
 
 const store = useNewsStore();
+const router = useRouter();
 
 const state = reactive({
   topic: store.topic,
@@ -23,6 +25,7 @@ const onSubmit = () => {
 
 <template>
   <div>
+    <button @click="router.go(-1)">Back</button>
     <h1>Search</h1>
     <form @submit.prevent="onSubmit">
       <label>Add a key-word for search
