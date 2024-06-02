@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useNewsStore } from '@/stores/newsStore.js'
-import { reactive } from 'vue'
+import {useNewsStore} from '@/stores/newsStore.js'
+import {reactive} from 'vue'
 import ListOfNews from '@/components/ListOfNews.vue'
-import { SortingType } from '@/constants/SortingType'
-import { formatDate } from '@/utils/dateUtils'
-import { useRouter } from 'vue-router'
+import {SortingType} from '@/constants/SortingType'
+import {formatDate} from '@/utils/dateUtils'
+import {useRouter} from 'vue-router'
 
 const store = useNewsStore()
 const router = useRouter()
@@ -31,11 +31,11 @@ const onSubmit = () => {
   <form @submit.prevent="onSubmit" class="search_view__form">
     <div class="input_box">
       <label>Add a key-word for search</label>
-      <input class="text_input" v-model="state.topic" type="text" />
+      <input class="text_input" v-model="state.topic" type="text"/>
     </div>
     <div class="input_box">
       <label>Add date</label>
-      <input class="text_input" v-model="state.date" type="date" />
+      <input class="text_input" v-model="state.date" type="date"/>
     </div>
     <div class="input_box">
       <label>sort buy</label>
@@ -47,7 +47,6 @@ const onSubmit = () => {
     </div>
     <button class="form_btn" :disabled="!state.topic" type="submit">Search</button>
   </form>
-  <div></div>
   <ListOfNews :news-list="store.searchedArticles"></ListOfNews>
 </template>
 
@@ -84,9 +83,8 @@ const onSubmit = () => {
 .search_view__form {
   display: flex;
   gap: 1rem;
-  margin: 1rem;
+  margin: 3rem;
   align-items: center;
-  padding: 2rem;
 }
 
 .input_box {
@@ -117,5 +115,12 @@ const onSubmit = () => {
   background-color: #b96464;
   color: #333;
   cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+  .search_view__form {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 </style>

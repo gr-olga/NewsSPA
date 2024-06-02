@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { News } from '@/types'
+import type {News} from '@/types'
 import NewsItem from '@/components/NewsItem.vue'
 
 defineProps<{
@@ -20,5 +20,11 @@ defineProps<{
   display: grid;
   grid-template-columns: auto auto;
   gap: 5px;
+}
+
+@media (max-width: 1000px) {
+  .news_list_box {
+    grid-template-columns: auto;
+  }
 }
 </style>

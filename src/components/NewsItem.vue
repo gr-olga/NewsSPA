@@ -92,4 +92,13 @@ defineProps<{
   font-size: 1rem;
   color: #333;
 }
+@media (max-width: 700px) {
+  .item_box {
+    display: flex;
+    flex-direction: column;
+  }
+  .text_box {
+    margin-inline: 0;
+  }
+}
 </style>
