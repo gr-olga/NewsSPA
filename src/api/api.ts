@@ -1,5 +1,6 @@
 import axios from "axios";
 import type {SortingType} from "@/constants/SortingType";
+import type {News} from "@/types";
 
 const API_KEY = 'c5083103aa0845fba332e08c33de9887'
 const BaseUrl = 'https://newsapi.org/v2/'
@@ -9,7 +10,7 @@ export async function getSpecificNews(topic: string, date: string, sortBy: Sorti
     try {
         const fullUrl = `${BaseUrl}everything?q=${topic}&to=${date}&sortBy=${sortBy}&pageSize=10&apiKey=${API_KEY}`;
         const res = await axios.get(fullUrl)
-        return res.data.articles
+        return res.data.articles.filter((article: News) => article.title !== "[Removed]")
     } catch (e) {
         console.log(e)
     }

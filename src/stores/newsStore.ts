@@ -26,7 +26,7 @@ export const useNewsStore = defineStore('news', {
             getGeneralNews().then((articles) => this.generalArticles = articles);
         },
         fetchSearchedArticles() {
-            getSpecificNews(this.topic, this.date, this.sortBy).then(articles => this.searchedArticles = articles);
+            getSpecificNews(this.topic, this.date, this.sortBy).then(articles => this.searchedArticles = articles)
         },
         setTopic(topic: string) {
             this.topic = topic;
