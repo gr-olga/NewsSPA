@@ -1,39 +1,24 @@
 # newsSPA
+## Overview
 
-This template should help get you started developing with Vue 3 in Vite.
+This Vue.js Single Page Application allows users to browse, search, 
+and read the latest news articles using a free news API. 
+The application features Vue Router for routing, 
+Pinia for state management, and is styled using CSS to ensure responsiveness across different devices.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Browse the latest news articles
+- Search functionality to find news articles by keyword or date
+- Filter news articles by relevancy, popularity, or date
+- Link to the original news article
+- Responsive design for mobile and desktop views
 
-## Type Support for `.vue` Imports in TS
+## Technologies Used
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Vue.js 3
+- Pinia for state management
+- Vue Router for routing
+- Axios for API requests
+- CSS for styling (responsive design)
+- ES6+ features
